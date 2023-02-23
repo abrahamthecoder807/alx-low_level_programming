@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * add - Adds two value
+ * main - check the code
  * Return: Always 0.
  */
 
@@ -9,7 +9,7 @@ int main(void)
 {
 	int n;
 
-	n = Add(89, 9);
+	n = add(89, 9);
 	printf("%d\n", n);
 	return (0);
 }
