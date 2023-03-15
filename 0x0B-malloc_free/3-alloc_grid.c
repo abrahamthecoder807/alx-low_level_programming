@@ -1,11 +1,13 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
+
 /**
- * alloc_grid - nested loop to make grid
+ * alloc_grid - A function that returns a pointer to a
+ * 2 dimensional array of integers
  * @width: An input integer at number of columns
  * @height: An input integer at number of rows
- * Return: pointer to 2D array, NULL on failure
+ * Return: pointer to a 2D array, NULL on failure
  */
 int **alloc_grid(int width, int height)
 {
