@@ -1,35 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
- * main - prints opcode of own main function
- * @argc: argument count
- * @argv: array of arguments
- * Return: 1 or 2 on fail, 0 on success
- */
+  *main - print opcodes of a given machine.
+  *@argc: number of arguments.
+  *@argv: argument vector.
+  *
+  *Return: 0.
+  */
 int main(int argc, char *argv[])
 {
-	int bytes, i;
-	unsigned char *func_ptr;
+	int count, bytes;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
+
 	bytes = atoi(argv[1]);
 	if (bytes < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-	func_ptr = (unsigned char *)main;
-	i = 0;
-	if (bytes > 0)
+
+	for (count = 0; count < bytes; count++)
 	{
-		while (i < (bytes - 1))
-			printf("%02hhx ", func_ptr[i++]);
-		printf("%hhx\n", func_ptr[i]);
+		printf("%02hhx", *((char *)main + count));
+		if (count  < bytes - 1)
+			printf(" ");
+		else
+			printf("\n");
 	}
 	return (0);
 }
