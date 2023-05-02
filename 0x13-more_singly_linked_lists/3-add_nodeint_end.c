@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint - A function that adds a new node at the end of a list
+ * add_nodeint_end - A function that adds a new node at the end of a list
  * @head: The head of a linked list
  * @n: Integer valve to be added to a new node
  * Return: The address of the elemen, or NULL if failed
